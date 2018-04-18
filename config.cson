@@ -1,0 +1,114 @@
+#
+# commands:   Map of predefined commands which can be referenced by key; should
+#             contain a 'default' command to be used as the default open command
+#
+# types:
+#
+#   name:     File type description; required
+#
+#   aliases:  Array of additional extensions associated with type
+#
+#   icon:     Icon name, matching an "{icon}.ico" or "{icon}.*.ico" (if hashed)
+#             file in the icons directory, or the full icon path if containing a
+#             backslash; defaults to the extension
+#
+#   open:     The primary open command, either the key of a defined command or
+#             the full command itself; defaults to 'default'
+#
+#   menu:     Additional commands or menu items as a map of name to command
+#
+#   shellNew: True to include the extension in Explorer's New menu
+#
+#   nuke:     False to avoid deleting existing keys
+#
+
+commands:
+  default: '"C:\\Program Files\\Microsoft VS Code\\Code.exe" "%1"'
+  chrome: '"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" -- "%1"'
+  bandizip: '"C:\\Program Files\\Bandizip\\Bandizip64.exe" "%1"'
+  sumatra: '"C:\\Program Files\\SumatraPDF\\SumatraPDF.exe" "%1"'
+types:
+  babelrc:
+    name: 'Babel Configuration File'
+  cbz:
+    name: 'Comic Book Archive'
+    aliases: [ 'cbr' ]
+    icon: 'book'
+    open: 'sumatra'
+    nuke: false # K-Lite Codec Pack installs thumbnail handler
+  coffee:
+    name: 'CoffeeScript File'
+  conf:
+    name: 'Configuration File'
+    icon: '%SystemRoot%\\system32\\imageres.dll,-69'
+  config:
+    name: 'XML Configuration File'
+    icon: 'xml'
+  cson:
+    name: 'CSON File'
+  css:
+    name: 'Cascading Stylesheet'
+  editorconfig:
+    name: 'Editor Configuration File'
+  ejs:
+    name: 'Embedded JavaScript Template'
+  epub:
+    name: 'Book (EPUB)'
+    icon: 'book'
+    open: 'sumatra'
+  gitconfig:
+    name: 'Git Configuration File'
+    aliases: [ 'gitignore', 'gitattributes', 'gitmodules' ]
+    icon: 'git'
+  html:
+    name: 'HTML File'
+    aliases: [ 'htm', 'xhtml' ]
+    open: 'chrome'
+  ini:
+    name: 'INI Configuration File'
+    icon: '%SystemRoot%\\system32\\imageres.dll,-69'
+  js:
+    name: 'JavaScript File'
+    aliases: [ 'jsx' ]
+  json:
+    name: 'JSON File'
+  less:
+    name: 'Less Stylesheet'
+  md:
+    name: 'Markdown Document'
+  mobi:
+    name: 'Book (MOBI)'
+    icon: 'book'
+    open: 'sumatra'
+  npmrc:
+    name: 'NPM Configuration File'
+    aliases: [ 'npmignore' ]
+    icon: 'npm'
+  nupkg:
+    name: 'NuGet Package'
+    icon: 'nuget'
+    open: 'bandizip'
+    menu:
+      '&Unpack': 'C:\\Windows\\System32\\cmd.exe /c extract-nupkg.exe "%1"'
+  nuspec:
+    name: 'NuGet Spec'
+    icon: 'nuget'
+    menu:
+      '&Pack': 'C:\\Windows\\System32\\cmd.exe /c "nuget pack "%1" -NoPackageAnalysis || pause"'
+  php:
+    name: 'PHP File'
+  scss:
+    name: 'Sass Stylesheet'
+  sql:
+    name: 'SQL File'
+  ts:
+    name: 'TypeScript File'
+  txt:
+    name: 'Text Document'
+    aliases: [ 'log', 'nfo' ]
+    icon: '%SystemRoot%\\system32\\imageres.dll,-102'
+    shellNew: true
+  xml:
+    name: 'XML File'
+  yml:
+    name: 'YAML File'

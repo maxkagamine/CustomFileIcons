@@ -1,0 +1,9 @@
+{
+  "name": "gen",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "crc": "^3.4.4",
+    "icon-gen": "^1.1.3"
+  }
+}
