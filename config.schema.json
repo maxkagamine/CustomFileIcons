@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "commands": {
+      "type": "object",
+      "description": "Map of predefined commands which can be referenced by key",
+      "properties": {
+        "default": {
+          "type": "string",
+          "description": "The default open command if none specified"
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "types": {
+      "type": "object",
+      "description": "Map of file extensions to file type configurations",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "File type description"
+          },
+          "aliases": {
+            "type": "array",
+            "description": "Any additional extensions associated with the type",
+            "items": {
+              "type": "string"
+            }
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icon name matching an \"{icon}.*\" file in the icons directory, or the full path to an icon; defaults to the extension"
+          },
+          "open": {
+            "type": "string",
+            "description": "The open command, either the key of a defined command or the full command itself",
+            "default": "default"
+          },
+          "menu": {
+            "type": "object",
+            "description": "Additional menu items as a map of name to command; use an ampersand in the name to specify the underlined \"access key\" (double for a literal)",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "commands",
+    "types"
+  ]
+}

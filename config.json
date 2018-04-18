@@ -1,0 +1,125 @@
+{
+  "$schema": "./config.schema.json",
+  "commands": {
+    "default": "\"C:\\Program Files\\Microsoft VS Code\\Code.exe\" \"%1\"",
+    "chrome": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -- \"%1\"",
+    "bandizip": "\"C:\\Program Files\\Bandizip\\Bandizip.exe\" \"%1\"",
+    "sumatra": "\"C:\\Program Files\\SumatraPDF\\SumatraPDF.exe\" \"%1\""
+  },
+  "types": {
+    "babelrc": {
+      "name": "Babel Configuration File"
+    },
+    "cbz": {
+      "name": "Comic Book Archive",
+      "aliases": [ "cbr" ],
+      "icon": "book",
+      "open": "sumatra"
+    },
+    "coffee": {
+      "name": "CoffeeScript File"
+    },
+    "conf": {
+      "name": "Configuration File",
+      "icon": "%SystemRoot%\\system32\\imageres.dll,-69"
+    },
+    "config": {
+      "name": "XML Configuration File",
+      "icon": "xml"
+    },
+    "cson": {
+      "name": "CSON File",
+      "icon": "coffee"
+    },
+    "css": {
+      "name": "Cascading Stylesheet"
+    },
+    "editorconfig": {
+      "name": "Editor Configuration File"
+    },
+    "ejs": {
+      "name": "Embedded JavaScript Template"
+    },
+    "epub": {
+      "name": "Book (EPUB)",
+      "icon": "book",
+      "open": "sumatra"
+    },
+    "gitconfig": {
+      "name": "Git Configuration File",
+      "aliases": [ "gitignore", "gitattributes", "gitmodules" ],
+      "icon": "git"
+    },
+    "html": {
+      "name": "HTML File",
+      "aliases": [ "htm", "xhtml" ],
+      "open": "chrome"
+    },
+    "ini": {
+      "name": "INI Configuration File",
+      "icon": "%SystemRoot%\\system32\\imageres.dll,-69"
+    },
+    "js": {
+      "name": "JavaScript File",
+      "aliases": [ "jsx" ]
+    },
+    "json": {
+      "name": "JSON File"
+    },
+    "less": {
+      "name": "Less Stylesheet"
+    },
+    "md": {
+      "name": "Markdown Document"
+    },
+    "mobi": {
+      "name": "Book (MOBI)",
+      "icon": "book",
+      "open": "sumatra"
+    },
+    "npmrc": {
+      "name": "NPM Configuration File",
+      "aliases": [ "npmignore" ],
+      "icon": "npm"
+    },
+    "nupkg": {
+      "name": "NuGet Package",
+      "icon": "nuget",
+      "open": "bandizip",
+      "menu": {
+        "&Unpack": "C:\\Windows\\System32\\cmd.exe /c extract-nupkg.exe \"%1\""
+      }
+    },
+    "nuspec": {
+      "name": "NuGet Spec",
+      "icon": "nuget",
+      "menu": {
+        "&Pack": "C:\\Windows\\System32\\cmd.exe /c \"nuget pack \"%1\" -NoPackageAnalysis || pause\""
+      }
+    },
+    "php": {
+      "name": "PHP File"
+    },
+    "scss": {
+      "name": "Sass Stylesheet"
+    },
+    "sql": {
+      "name": "SQL File"
+    },
+    "ts": {
+      "name": "TypeScript File"
+    },
+    "txt": {
+      "name": "Text Document",
+      "aliases": [ "log", "nfo" ],
+      "icon": "%SystemRoot%\\system32\\imageres.dll,-102"
+    },
+    "xml": {
+      "name": "XML File"
+    },
+    "yaml": {
+      "name": "YAML File",
+      "aliases": [ "yml" ]
+    }
+  }
+}
