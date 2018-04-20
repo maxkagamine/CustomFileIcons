@@ -124,6 +124,8 @@ namespace CustomFileIcons
                 }
             }
 
+            Native.UpdateShellAssociations();
+
             Console.WriteLine("Registered file types.");
 
             // Create test files
