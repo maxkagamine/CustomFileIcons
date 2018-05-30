@@ -150,8 +150,8 @@ namespace CustomFileIcons
 
             // Show settings UI if any not already set
 
-            Func<string[]> getUnset = () => extensions.Where(x => !Native.GetAssociatedProgram(x).Equals(ProxyExePath, StringComparison.OrdinalIgnoreCase)).ToArray();
-            var unset = getUnset();
+            string[] GetUnset() => extensions.Where(x => !string.Equals(Native.GetAssociatedProgram(x), ProxyExePath, StringComparison.OrdinalIgnoreCase)).ToArray();
+            var unset = GetUnset();
 
             if (unset.Length > 0)
             {
@@ -185,7 +185,7 @@ namespace CustomFileIcons
                 {
                     Thread.Sleep(500);
 
-                    unset = getUnset();
+                    unset = GetUnset();
                     if (unset.Length != unsetCount)
                     {
                         unsetCount = unset.Length;
